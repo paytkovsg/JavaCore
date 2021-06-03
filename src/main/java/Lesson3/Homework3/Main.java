@@ -41,9 +41,13 @@ public class Main {
     }
 
     private static <T> void swapElements(T[] arr, int i, int i1) {
-        T temp = arr[i];
-        arr[i] = arr[i1];
-        arr[i1] = temp;
+        try {
+            T temp = arr[i];
+            arr[i] = arr[i1];
+            arr[i1] = temp;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 
